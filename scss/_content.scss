@@ -1,0 +1,89 @@
+body{
+    background-image: url(../img/4907157.jpg);
+}
+
+h1{
+    font-size: $textXL;
+}
+
+.bg-red{
+    background-color: $mainRed ;
+}
+
+$animation-ease:(
+    "out":ease-out,
+    "in":ease-in
+);
+
+@keyframes myAnim {
+	0% {
+        @include animation(1,0,1);
+		transform-origin: center center;
+	}
+
+	10% {
+        @include animation(0.91,1,0);
+	}
+
+	17% {
+        @include animation(0.98,0,1);
+	}
+
+	33% {
+        @include animation(0.87,1,0);
+	}
+
+	45% {
+        @include animation(1,0,1);
+	}
+}
+
+.main-bg{
+    background: $mainBlack;
+}
+
+.bg-black{
+    @extend .main-bg;
+    color: $mainWhite;
+    border: none;
+    &:hover{
+        box-shadow: 0 12px 16px 0 $blackTransp, 0 17px 50px 0 $blackTransp2;
+        animation: myAnim 2s ease 0s 1 normal forwards;
+    }
+}
+
+.btn-shadow{
+    &:hover{
+        box-shadow: 0 12px 16px 0 $blackTransp, 0 17px 50px 0 $blackTransp2;
+        animation: myAnim 2s ease 0s 1 normal forwards;
+    }
+}
+
+.opacity{
+    opacity: 1;
+    &:hover{
+        opacity: 0.8;
+        transition: opacity 1s ease 0s;
+    }
+}
+
+.bg-none{
+    background: none;
+}
+
+.text-red{
+    color: $mainRed;
+}
+
+.text-white{
+    color: $mainWhite;
+}
+
+.btn-red{
+    background-color: $mainRed;
+    border: none;
+}
+
+.navbar-toggler{
+     border-color: transparent !important;
+}

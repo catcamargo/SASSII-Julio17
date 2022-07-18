@@ -1,0 +1,10 @@
+@mixin animation($scale,$in,$out) {
+    @if $in == 1 {
+        animation-timing-function: map-get($animation-ease, in);
+    }
+
+    @if $out == 1 {
+        animation-timing-function: map-get($animation-ease, out);
+    }
+    transform: scale($scale);
+}
